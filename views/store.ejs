@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Generics | Store</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://checkout.stripe.com/checkout.js" defer></script>
+    <script>
+      var stripePublicKey = '<%= stripePublicKey %>'
+      </script>
+      <script src="store.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-nav nav">
+        <ul>
+          <li><a href="home.html">home</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="store.html">store</a></li>
+        </ul>
+      </nav>
+      <h1 class="band-name band-name-large">The Generics</h1>
+    </header>
+    <section class="content-section container">
+      <h2 class="section-header">MUSIC</h2>
+      <div class="shop-items">
+
+        <% items.music.forEach(item => { %>
+          <div class="shop-item" data-item-id="<%= item.id %> ">
+            <span class="shop-item-title"><%= item.name %> </span>
+            <img class="shop-item-image" src="Images/<%= item.imgName %> " alt="" />
+            <div class="shop-item-details">
+              <span class="shop-item-price">$<%= item.price / 100 %> </span>
+              <button class="btn btn-primary shop-item-button">
+                ADD TO CART
+              </button>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+        <!-- <div class="shop-item">
+          <span class="shop-item-title">album 1</span>
+          <img class="shop-item-image" src="/Images/Album 1.png" alt="" />
+          <div class="shop-item-details">
+            <span class="shop-item-price">$12.99</span>
+            <button class="btn btn-primary shop-item-button">
+              ADD TO CART
+            </button>
+          </div>
+        </div> -->
+
+        <!-- album 2 -->
+        <!-- <div class="shop-item">
+          <span class="shop-item-title">album 2</span>
+          <img class="shop-item-image" src="/Images/Album 2.png" alt="" />
+          <div class="shop-item-details">
+            <span class="shop-item-price">$14.99</span>
+            <button class="btn btn-primary shop-item-button">
+              ADD TO CART
+            </button>
+          </div>
+        </div> -->
+        <!-- albulm3 -->
+        <!-- <div class="shop-item">
+          <span class="shop-item-title">album 3</span>
+          <img class="shop-item-image" src="/Images/Album 3.png" alt="" />
+          <div class="shop-item-details">
+            <span class="shop-item-price">$9.99</span>
+            <button class="btn btn-primary shop-item-button">
+              ADD TO CART
+            </button>
+          </div>
+        </div> -->
+
+        <!-- album 4 -->
+        <!-- <div class="shop-item">
+          <span class="shop-item-title">album 4</span>
+          <img class="shop-item-image" src="/Images/Album 4.png" alt="" />
+          <div class="shop-item-details">
+            <span class="shop-item-price">$19.99</span>
+            <button class="btn btn-primary shop-item-button">
+              ADD TO CART
+            </button>
+          </div> -->
+     
+    </section>
+    <section class="content-section container">
+      <h2 class="section-header">MERCH</h2>
+      <div class="shop-items">
+        <% items.merch.forEach(item => { %>
+          <div class="shop-item" data-item-id="<%= item.id %> ">
+            <span class="shop-item-title"><%= item.name %> </span>
+            <img class="shop-item-image" src="/Images/<%= item.imgName %> " alt="" />
+            <div class="shop-item-details">
+              <span class="shop-item-price">$<%= item.price / 100 %> </span>
+              <button class="btn btn-primary shop-item-button">
+                ADD TO CART
+              </button>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+        <!-- album5 -->
+       
+        <!-- album6 -->
+        <!-- <div class="shop-item">
+          <span class="shop-item-title">Cofee Cup</span>
+          <img class="shop-item-image" src="/Images/Cofee.png" alt="" />
+          <div class="shop-item-details">
+            <span class="shop-item-price">$6.99</span>
+            <button class="btn btn-primary shop-item-button">
+              ADD TO CART
+            </button>
+          </div>
+        </div> -->
+    
+    </section>
+    <section class="container content-section">
+      <h2 class="section-header">CART</h2>
+      <div class="cart-row">
+        <span class="cart-item cart-header cart-column">ITEM</span>
+        <span class="cart-price cart-header cart-column">PRICE</span>
+        <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+      </div>
+      <div class="cart-items">
+        <!-- <div class="cart-row">
+          <div class="cart-item cart-column">
+            <img
+              class="cart-item-image"
+              src="/Images/Shirt.png"
+              alt=""
+              width="100"
+              height="100"
+            />
+            <span class="cart-item-title">T-shirt</span>
+          </div>
+          <span class="cart-price cart-column">$19.99</span>
+          <div class="cart-quantity cart-column">
+            <input class="cart-quantity-input" type="number" value="1" />
+            <button class="btn btn-danger">REMOVE</button>
+          </div>
+        </div> -->
+
+          <!-- end of cart-row 1 -->
+          <!-- <div class="cart-row">
+          <div class="cart-item cart-column">
+            <img
+              class="cart-item-image"
+              src="/Images/Album 3.png"
+              alt=""
+              width="100"
+              height="100"
+            />
+            <span class="cart-item-title">Album 3</span>
+          </div>
+          <span class="cart-price cart-column">$9.99</span>
+          <div class="cart-quantity cart-column">
+            <input class="cart-quantity-input" type="number" value="2" />
+            <button class="btn btn-danger">REMOVE</button>
+          </div> -->
+        </div>
+      </div>
+      <!-- end of album-3 -->
+      <div class="cart-total">
+        <span class="cart-total-title">Total</span>
+        <span class="cart-total-price">$0</span>
+      </div>
+      <button class="btn btn-primary btn-purchase">PURCHASE</button>
+    </section>
+    <footer class="main-footer">
+      <div class="main-footer-container">
+        <h3 class="band-name">The Generics</h3>
+        <ul class="nav footer-nav">
+          <li>
+            <a href="www.facebook.com" alt="" target="_blank">
+              <img src="/Images/Facebook Logo.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="www.spotify.com" alt="" target="_blank">
+              <img src="/Images/Spotify Logo.png" alt=""
+            /></a>
+          </li>
+          <li>
+            <a href="www.youtube.com" alt="" target="_blank">
+              <img src="/Images/YouTube Logo.png" alt=""
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+ 
+  </body>
+</html>

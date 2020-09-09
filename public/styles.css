@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400");
+@import url("https://fonts.googleapis.com/css?family=Metal+Mania");
+
+@font-face {
+  font-family: "Booter - Zero Zero";
+  src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
+    url("Fonts/Booter - Zero Zero.woff2") format(woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  font-family: Raleway, sans-serif;
+  color: #777;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-header {
+  background-color: rgba(0, 0, 0, 0.6);
+  background-image: url("/Images/Header\ Background.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  padding-bottom: 30px;
+}
+
+.nav ul {
+  margin: 0;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav a {
+  display: inline-block;
+  text-decoration-line: none;
+  color: white;
+  padding: 0.5em;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.main-nav {
+  text-align: center;
+  font-size: 1.1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.main-nav li {
+  padding: 0 5%;
+}
+
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.band-name {
+  text-align: center;
+  font-family: "Booter - Zero Zero";
+  color: white;
+  font-size: 1.1em;
+  font-weight: normal;
+  margin: 0;
+}
+
+.band-name-large {
+  font-size: 4em;
+}
+
+.content-section {
+  margin: 1em;
+}
+
+/* .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.section-header {
+  text-align: center;
+  font-family: "Metal Mania";
+  font-size: 2.5em;
+  font-weight: normal;
+  color: #333;
+}
+.about-band-image {
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin: 1em;
+  border-radius: 50%;
+}
+.main-footer {
+  background-color: #56ccf2;
+  color: white;
+  padding: 0.25em;
+}
+
+.main-footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-footer ul {
+  text-align: end;
+}
+
+.footer-nav li {
+  padding: 0 0.5em;
+}
+
+.footer-nav img {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 800px) {
+  /* .main-header {
+    background-image: url("/Images/Header\ Background.jpg");
+    background-size: cover;
+
+  } */
+
+  .nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+
+  .nav li {
+    font-size: 2em;
+    text-transform: capitalize;
+  }
+
+  .nav a {
+    display: flex;
+  }
+
+  .main-nav {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .about-band-image {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    display: flex;
+  }
+  .section-header {
+    font-size: 4em;
+    text-align: center;
+    font-weight: bold;
+  }
+  .band-name {
+    font-size: 4em;
+  }
+  .band-name-large {
+    text-align: center;
+    font-size: 8em;
+  }
+  .footer-nav img {
+    width: 30px;
+    height: 30px;
+  }
+  .main-footer ul {
+    display: flex;
+  }
+  .main-footer {
+    margin-top: 10em;
+  }
+  .section-article {
+    font-size: 1.3em;
+  }
+}
+
+/* home */
+.btn {
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.65em;
+  cursor: pointer;
+}
+
+.btn-header {
+  margin: 0.5em 15% 2em 15%;
+  color: white;
+  border: 2px solid #2d9cdb;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  font-size: 1em;
+  font-weight: lighter;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-transform: capitalize;
+}
+
+.btn-play {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  font-size: 4em;
+  padding: 0;
+  color: #2d9cdb;
+  width: 100px;
+  height: 100px;
+}
+
+.btn-header:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.tour-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.tour-item {
+  display: flex;
+  padding-right: 0.2em;
+}
+
+.tour-date {
+  color: #555;
+  width: 11%;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+
+.tour-city {
+  width: 22%;
+  font-size: 0.75em;
+}
+
+.tour-arena {
+  width: 30%;
+  font-size: 0.75em;
+  vertical-align: middle;
+}
+
+.tour-btn {
+  font-size: 0.75em;
+  flex-shrink: 0;
+}
+
+.tour-row:last-child {
+  border-bottom: none;
+}
+.btn-primary {
+  color: white;
+  background-color: #56ccf2;
+  border: none;
+  border-radius: 0.3em;
+  font-weight: bold;
+  outline: none;
+}
+
+.btn-primary:hover {
+  background-color: #2d9cdb;
+}
+
+@media screen and (min-width: 800px) {
+  .btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.67em;
+    cursor: pointer;
+  }
+
+  .btn-header {
+    margin: 0.5em 15% 2em 15%;
+    color: white;
+    border: 2px solid #2d9cdb;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    font-size: 2em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .btn-play {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    font-size: 4em;
+    padding: 0;
+    color: #2d9cdb;
+    width: 100px;
+    height: 100px;
+  }
+
+  .btn-header:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .tour-row {
+    border-bottom: 1px solid black;
+    font-size: 1.5em;
+    display: flex;
+    min-width: 95vw;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "a b c d";
+  }
+
+  .tour-item {
+    padding-right: 0.5em;
+  }
+
+  .tour-date {
+    color: #555;
+    font-weight: bold;
+    grid-area: a;
+  }
+
+  .tour-city {
+    grid-area: b;
+  }
+
+  .tour-arena {
+    grid-area: c;
+  }
+
+  .tour-btn {
+    max-width: 18%;
+    margin: 0 auto;
+    flex-grow: 0;
+    justify-self: center;
+    grid-area: d;
+  }
+
+  .tour-row:last-child {
+    border-bottom: none;
+  }
+  .btn-primary {
+    font-size: 0.85em;
+    color: white;
+    background-color: #56ccf2;
+    border: none;
+    border-radius: 0.3em;
+    font-weight: bold;
+  }
+
+  .btn-primary:hover {
+    background-color: #2d9cdb;
+  }
+}
+
+/* Store reinvent */
+.shop-item {
+  margin: 30px;
+}
+
+.shop-item-title {
+  text-transform: capitalize;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.shop-item-image {
+  height: 250px;
+}
+
+.shop-item-details {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.shop-item-price {
+  flex-grow: 1;
+  color: #333;
+}
+
+.shop-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cart-header {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.cart-column {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  margin-right: 1.5em;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-row {
+  display: flex;
+}
+
+.cart-item {
+  width: 45%;
+}
+
+.cart-price {
+  width: 20%;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.cart-quantity {
+  width: 35%;
+}
+
+.cart-item-title {
+  color: #333;
+  margin-left: 0.5em;
+  font-size: 1.2em;
+}
+
+.cart-item-image {
+  width: 75px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.btn-danger {
+  color: white;
+  background-color: #eb5757;
+  border: none;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+.btn-danger:hover {
+  background-color: #cc4c4c;
+}
+
+.cart-quantity-input {
+  height: 34px;
+  width: 50px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  color: #333;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2em;
+  margin-right: 25px;
+}
+
+.cart-row:last-child {
+  border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+  border: none;
+}
+
+.cart-total {
+  text-align: end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.cart-total-title {
+  font-weight: bold;
+  font-size: 1.5em;
+  color: black;
+  margin-right: 20px;
+}
+
+.cart-total-price {
+  color: #333;
+}
+
+.btn-purchase {
+  display: block;
+  margin: 40px auto 80px auto;
+  font-size: 1.75em;
+}
